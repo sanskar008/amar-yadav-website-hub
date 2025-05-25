@@ -1,12 +1,36 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+
+import React from 'react';
+import Header from '../components/Header';
+import AboutSection from '../components/AboutSection';
+import InstagramFeed from '../components/InstagramFeed';
+import EventsSection from '../components/EventsSection';
+import Footer from '../components/Footer';
 
 const Index = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-gray-600">Start building your amazing project here!</p>
-      </div>
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-indigo-50">
+      <Header />
+      
+      <main className="container mx-auto px-4 py-8">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
+          {/* About Section - Left */}
+          <div className="lg:col-span-4">
+            <AboutSection />
+          </div>
+          
+          {/* Instagram Feed - Center */}
+          <div className="lg:col-span-5">
+            <InstagramFeed />
+          </div>
+          
+          {/* Events Section - Right */}
+          <div className="lg:col-span-3">
+            <EventsSection />
+          </div>
+        </div>
+      </main>
+      
+      <Footer />
     </div>
   );
 };
