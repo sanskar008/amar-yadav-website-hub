@@ -9,13 +9,25 @@ const Header = () => {
         <div className="flex flex-col md:flex-row justify-between items-center md:items-start mb-6">
           {/* Left Photo + Caption */}
           <div className="flex flex-col items-center mb-4 md:mb-0">
-            <img
-              src="/pm.jpg"
-              alt="PM"
-              className="w-80 h-80 object-cover rounded-full border-4 border-white"
-            />
+            <a
+              href="https://www.pmindia.gov.in/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src="/pm.jpg"
+                alt="PM"
+                className="w-80 h-80 object-cover rounded-full border-4 border-white"
+              />
+            </a>
             <p className="mt-2 text-lg text-center text-blue-700 font-bold">
-              माननीय प्रधानमंत्री जी
+              <a
+                href="https://www.pmindia.gov.in/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                माननीय प्रधानमंत्री जी
+              </a>
             </p>
           </div>
 
@@ -45,11 +57,17 @@ const Header = () => {
               />
             </div>
             <div className="flex justify-center items-center mb-4">
-              <img
-                src="/amar2.jpg"
-                alt="Shri Amar Singh Yadav"
-                className="w-80 h-80 mt-4 object-cover rounded-full border-4 border-white"
-              />
+              <a
+                href="https://www.instagram.com/amarsingh_bjp/?hl=en"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  src="/amar2.jpg"
+                  alt="Shri Amar Singh Yadav"
+                  className="w-80 h-80 mt-4 object-cover rounded-full border-4 border-white"
+                />
+              </a>
             </div>
 
             {/* Caption */}
@@ -62,13 +80,25 @@ const Header = () => {
 
           {/* Right Photo + Caption */}
           <div className="flex flex-col items-center mt-4 md:mt-0">
-            <img
-              src="/cm.jpeg"
-              alt="CM"
-              className="w-80 h-80 object-cover rounded-full border-4 border-white"
-            />
+            <a
+              href="https://www.mpinfo.org/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src="/cm.jpeg"
+                alt="CM"
+                className="w-80 h-80 object-cover rounded-full border-4 border-white"
+              />
+            </a>
             <p className="mt-2 text-lg text-center text-blue-700 font-bold">
-              माननीय मुख्यमंत्री जी
+              <a
+                href="https://www.cmmp.mp.gov.in/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                माननीय मुख्यमंत्री जी
+              </a>
             </p>
           </div>
         </div>
