@@ -15,9 +15,9 @@ const Header = () => {
               rel="noopener noreferrer"
             >
               <img
-                src="/pm.jpg"
+                src="/pm.png"
                 alt="PM"
-                className="w-80 h-80 object-cover rounded-full border-4 border-white"
+                className="w-80 h-80 object-cover rounded-full border-4 border-red-600"
               />
             </a>
             <p className="mt-2 text-lg text-center text-blue-700 font-bold">
@@ -63,9 +63,9 @@ const Header = () => {
                 rel="noopener noreferrer"
               >
                 <img
-                  src="/amar2.jpg"
+                  src="/amar2.png"
                   alt="Shri Amar Singh Yadav"
-                  className="w-80 h-80 mt-4 object-cover rounded-full border-4 border-white"
+                  className="w-80 h-80 mt-4 object-cover rounded-full border-4 border-red-600"
                 />
               </a>
             </div>
@@ -79,16 +79,16 @@ const Header = () => {
           </div>
 
           {/* Right Photo + Caption */}
-          <div className="flex flex-col items-center mt-4 md:mt-0">
+          <div className="flex flex-col items-center mt-4 md:mt-0 ">
             <a
               href="https://www.mpinfo.org/"
               target="_blank"
               rel="noopener noreferrer"
             >
               <img
-                src="/cm.jpeg"
+                src="/cm.png"
                 alt="CM"
-                className="w-80 h-80 object-cover rounded-full border-4 border-white"
+                className="w-80 h-80 object-cover rounded-full border-4 border-red-600"
               />
             </a>
             <p className="mt-2 text-lg text-center text-blue-700 font-bold">

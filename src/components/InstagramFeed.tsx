@@ -43,7 +43,7 @@ const InstagramFeed = () => {
           <blockquote
             className="instagram-media"
             data-instgrm-captioned
-            data-instgrm-permalink="https://www.instagram.com/p/DI037uyoqHX/?utm_source=ig_embed&utm_campaign=loading"
+            data-instgrm-permalink="https://www.instagram.com/p/DJ83OV9oky7/?utm_source=ig_embed&utm_campaign=loading"
             data-instgrm-version="14"
             style={{
               background: "#FFF",
@@ -60,7 +60,7 @@ const InstagramFeed = () => {
           >
             <div style={{ padding: "16px" }}>
               <a
-                href="https://www.instagram.com/p/DI037uyoqHX/?utm_source=ig_embed&utm_campaign=loading"
+                href="https://www.instagram.com/p/DJ83OV9oky7/?utm_source=ig_embed&utm_campaign=loading"
                 style={{
                   background: "#FFFFFF",
                   lineHeight: 0,
@@ -159,7 +159,7 @@ const InstagramFeed = () => {
           <blockquote
             className="instagram-media"
             data-instgrm-captioned
-            data-instgrm-permalink="https://www.instagram.com/p/CsIYO3dInRu/?utm_source=ig_embed&utm_campaign=loading"
+            data-instgrm-permalink="https://www.instagram.com/p/DHQ0yrgvwcx/?utm_source=ig_embed&utm_campaign=loading"
             data-instgrm-version="14"
             style={{
               background: "#FFF",
@@ -176,7 +176,7 @@ const InstagramFeed = () => {
           >
             <div style={{ padding: "16px" }}>
               <a
-                href="https://www.instagram.com/p/CsIYO3dInRu/?utm_source=ig_embed&utm_campaign=loading"
+                href="https://www.instagram.com/p/DHQ0yrgvwcx/?utm_source=ig_embed&utm_campaign=loading"
                 style={{
                   background: "#FFFFFF",
                   lineHeight: 0,
