@@ -4,6 +4,8 @@ import AboutSection from "../components/AboutSection";
 import InstagramFeed from "../components/InstagramFeed";
 import EventsSection from "../components/EventsSection";
 import Footer from "../components/Footer";
+import CarouselSection from "../components/CarouselSection";
+import ComplaintsSection from "../components/ComplaintsSection";
 
 const Index = () => {
   return (
@@ -11,6 +13,7 @@ const Index = () => {
       <Header />
 
       <main className="container mx-auto px-4 py-8">
+        <CarouselSection />
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
           {/* About Section - Left */}
           <div className="lg:col-span-4">
@@ -22,9 +25,12 @@ const Index = () => {
             <InstagramFeed />
           </div>
 
-          {/* Events Section - Right */}
+          {/* Complaints Section (above Events) - Right */}
           <div className="lg:col-span-3">
-            <EventsSection />
+            <ComplaintsSection />
+            <div className="mt-6">
+              <EventsSection />
+            </div>
           </div>
         </div>
       </main>
