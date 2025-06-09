@@ -3,13 +3,17 @@ import React from "react";
 const CarouselSection = () => {
   const images = [
     { src: "amar.jpg", alt: "Slide 1" },
-    { src: "amar2.jpg", alt: "Slide 2" },
-    { src: "cm.jpeg", alt: "Slide 3" },
-    { src: "pm.jpg", alt: "Slide 3" },
+    { src: "2.jpg", alt: "Slide 2" },
+    { src: "3.jpg", alt: "Slide 2" },
+    { src: "4.jpg", alt: "Slide 2" },
+    { src: "5.jpg", alt: "Slide 2" },
+    { src: "6.jpg", alt: "Slide 2" },
+    { src: "7.jpg", alt: "Slide 2" },
+    { src: "8.jpg", alt: "Slide 2" },
   ];
 
   // Duplicate images exactly twice for seamless scroll
-  const duplicatedImages = Array(5).fill(images).flat();
+  const duplicatedImages = Array(3).fill(images).flat();
 
   return (
     <div className="w-full overflow-hidden bg-white py-4">
