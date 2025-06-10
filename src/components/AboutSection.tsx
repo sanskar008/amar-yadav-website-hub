@@ -52,9 +52,26 @@ const AboutSection = () => {
             संपर्क सूत्र
           </h4>
           <div className="text-gray-600 text-sm space-y-1">
-            <p>📧 amarsinghyadav@gmail.com</p>
-            <p>📞 +91-XXXXX-XXXXX</p>
-            <p>🏛️ विधानसभा कार्यालय</p>
+            <p>
+              📧{" "}
+              <a
+                href="mailto:AamrY798@gmail.com"
+                className="text-blue-600 hover:underline"
+              >
+                AamrY798@gmail.com
+              </a>
+            </p>
+            <p>
+              📞{" "}
+              <a href="tel:+917440681111" className="hover:text-blue-600">
+                +91-74406-81111
+              </a>{" "}
+              /{" "}
+              <a href="tel:+919926394195" className=" hover:text-blue-600">
+                +91-99263-94195
+              </a>
+            </p>
+            <p>🏛️ जिला पंचायत के सामने, राजगढ़</p>
           </div>
         </div>
       </div>

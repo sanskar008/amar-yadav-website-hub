@@ -145,11 +145,23 @@ const EventsSection = () => {
       <div className="bg-gradient-to-br from-blue-600 to-indigo-700 text-white rounded-2xl shadow-xl p-6">
         <h3 className="text-xl font-bold mb-4">संपर्क करें</h3>
         <div className="space-y-3 text-sm">
-          <p>📧 amarsinghyadav@gmail.com</p>
-          <p>📞 +91-XXXXX-XXXXX</p>
-          <p>🏛️ विधानसभा कार्यालय</p>
+          <p>📧 AamrY798@gmail.com</p>
+          <p>
+            📞{" "}
+            <a href="tel:+917440681111" className="hover:text-blue-200">
+              +91-74406-81111
+            </a>{" "}
+            /{" "}
+            <a href="tel:+919926394195" className="hover:text-blue-200">
+              +91-99263-94195
+            </a>
+          </p>
+          <p>🏛️ जिला पंचायत के सामने, राजगढ़</p>
         </div>
-        <button className="w-full mt-4 bg-white text-blue-600 py-2 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+        <button
+          className="w-full mt-4 bg-white text-blue-600 py-2 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+          onClick={() => (window.location.href = "mailto:AamrY798@gmail.com")}
+        >
           संदेश भेजें
         </button>
       </div>

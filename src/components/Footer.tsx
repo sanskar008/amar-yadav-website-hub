@@ -10,9 +10,26 @@ const Footer = () => {
           <div>
             <h4 className="text-xl font-bold mb-4">संपर्क जानकारी</h4>
             <div className="space-y-2 text-gray-300">
-              <p>📧 amarsinghyadav@rajgarh.gov.in</p>
-              <p>📞 +91-XXXXX-XXXXX</p>
-              <p>🏛️ विधानसभा सचिवालय, भोपाल</p>
+              <p>
+                📧{" "}
+                <a
+                  href="mailto:AamrY798@gmail.com"
+                  className="text-white-600 hover:underline"
+                >
+                  AamrY798@gmail.com
+                </a>
+              </p>
+              <p>
+                📞{" "}
+                <a href="tel:+917440681111" className="hover:text-blue-200">
+                  +91-74406-81111
+                </a>{" "}
+                /{" "}
+                <a href="tel:+919926394195" className=" hover:text-blue-200">
+                  +91-99263-94195
+                </a>
+              </p>
+              <p>🏛️ जिला पंचायत के सामने, राजगढ़</p>
               <p>📍 राजगढ़ विधानसभा क्षेत्र, मध्य प्रदेश</p>
             </div>
           </div>
@@ -85,7 +102,17 @@ const Footer = () => {
             &copy; 2025 श्री अमर सिंह यादव - विधायक राजगढ़। सभी अधिकार सुरक्षित।
           </p>
 
-          <p className="mt-2 text-sm ">विकसितकर्ता: संस्कार</p>
+          <p className="mt-2 text-sm ">
+            विकसितकर्ता:{" "}
+            <a
+              href="https://www.instagram.com/sanskar.008/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline hover:text-white"
+            >
+              संस्कार
+            </a>
+          </p>
         </div>
       </div>
     </footer>

@@ -1,3 +1,4 @@
+
 import React from "react";
 import { Crown, MapPin } from "lucide-react";
 
@@ -8,7 +9,7 @@ const Header = () => {
       <div
         className="absolute inset-0 z-0"
         style={{
-          backgroundImage: "banner.jpg",
+          backgroundImage: "url('banner.jpg')",
           backgroundSize: "cover",
           backgroundPosition: "center",
           opacity: 0.7, // adjust opacity here as needed
