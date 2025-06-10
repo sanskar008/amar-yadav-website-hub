@@ -84,7 +84,8 @@ const Footer = () => {
           <p>
             &copy; 2025 श्री अमर सिंह यादव - विधायक राजगढ़। सभी अधिकार सुरक्षित।
           </p>
-          <p className="mt-2 text-sm">जनता की सेवा में समर्पित</p>
+
+          <p className="mt-2 text-sm ">विकसितकर्ता: संस्कार</p>
         </div>
       </div>
     </footer>

@@ -3,8 +3,24 @@ import { Crown, MapPin } from "lucide-react";
 
 const Header = () => {
   return (
-    <header className="bg-gradient-to-r from-[#F59E0B] via-[#FBBF24] to-[#D97706] text-white shadow-2xl">
-      <div className="container mx-auto px-4 py-8">
+    <header className="relative text-white shadow-2xl">
+      {/* Background image with opacity */}
+      <div
+        className="absolute inset-0 z-0"
+        style={{
+          backgroundImage: "banner.jpg",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          opacity: 0.7, // adjust opacity here as needed
+          pointerEvents: "none", // so it doesn't interfere with interactions
+        }}
+      />
+
+      {/* Gradient overlay on top of bg image to keep text readable */}
+      <div className="absolute inset-0 bg-gradient-to-r from-[#F59E0B] via-[#FBBF24] to-[#D97706] opacity-70 z-10"></div>
+
+      {/* Content container */}
+      <div className="relative container mx-auto px-4 py-8 z-20">
         {/* Row: Left Photo + Center Text + Right Photo */}
         <div className="flex flex-col md:flex-row justify-between items-center md:items-start mb-6">
           {/* Left Photo + Caption */}

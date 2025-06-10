@@ -8,20 +8,65 @@ import { toast } from "@/components/ui/use-toast";
 const ComplaintsSection = () => {
   const [formData, setFormData] = useState({
     name: "",
-    description: "",
-    village: "",
+    mobile: "",
     panchayat: "",
+    village: "",
+    description: "",
   });
+  const [loading, setLoading] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Here you would typically send the data to your backend
-    console.log("Submitted complaint:", formData);
-    toast({
-      title: "शिकायत दर्ज की गई",
-      description: "आपकी शिकायत सफलतापूर्वक दर्ज की गई है।",
-    });
-    setFormData({ name: "", description: "", village: "", panchayat: "" });
+    setLoading(true);
+
+    // SheetDB expects data inside `data` object as an array of objects or a single object
+    const dataToSend = {
+      data: {
+        name: formData.name,
+        mobile: formData.mobile,
+        panchayat: formData.panchayat,
+        village: formData.village,
+        description: formData.description,
+      },
+    };
+
+    try {
+      const response = await fetch("https://sheetdb.io/api/v1/uvjbbidmwjbqz", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(dataToSend),
+      });
+
+      if (response.ok) {
+        toast({
+          title: "शिकायत दर्ज की गई",
+          description: "आपकी शिकायत सफलतापूर्वक दर्ज की गई है।",
+        });
+        setFormData({
+          name: "",
+          mobile: "",
+          panchayat: "",
+          village: "",
+          description: "",
+        });
+      } else {
+        const errorData = await response.json();
+        toast({
+          title: "त्रुटि",
+          description: errorData.message || "डेटा भेजने में समस्या हुई।",
+        });
+      }
+    } catch (error) {
+      console.error("Error submitting complaint:", error);
+      toast({
+        title: "त्रुटि",
+        description: "डेटा भेजने में समस्या हुई। कृपया पुनः प्रयास करें।",
+      });
+    } finally {
+      setLoading(false);
+    }
   };
 
   const handleChange = (
@@ -41,6 +86,7 @@ const ComplaintsSection = () => {
       </div>
 
       <form onSubmit={handleSubmit} className="space-y-4">
+        {/* Your input fields unchanged */}
         <div className="space-y-2">
           <label htmlFor="name" className="text-sm font-medium text-gray-700">
             नाम
@@ -55,14 +101,15 @@ const ComplaintsSection = () => {
             className="w-full"
           />
         </div>
+
         <div className="space-y-2">
-          <label htmlFor="name" className="text-sm font-medium text-gray-700">
+          <label htmlFor="mobile" className="text-sm font-medium text-gray-700">
             मोबाइल नंबर
           </label>
           <Input
-            id="name"
-            name="name"
-            value={formData.name}
+            id="mobile"
+            name="mobile"
+            value={formData.mobile}
             onChange={handleChange}
             placeholder="अपना मोबाइल नंबर दर्ज करें"
             required
@@ -126,10 +173,13 @@ const ComplaintsSection = () => {
 
         <Button
           type="submit"
-          className="w-full bg-gradient-to-r from-[#F59E0B] to-[#D97706] hover:from-[#D97706] hover:to-[#F59E0B] text-white font-semibold py-2 px-4 rounded-lg transition-all duration-200 flex items-center justify-center gap-2"
+          disabled={loading}
+          className={`w-full bg-gradient-to-r from-[#F59E0B] to-[#D97706] hover:from-[#D97706] hover:to-[#F59E0B] text-white font-semibold py-2 px-4 rounded-lg transition-all duration-200 flex items-center justify-center gap-2 ${
+            loading ? "opacity-60 cursor-not-allowed" : ""
+          }`}
         >
           <Send size={20} />
-          शिकायत दर्ज करें
+          {loading ? "संकलित हो रहा है..." : "शिकायत दर्ज करें"}
         </Button>
       </form>
     </div>
